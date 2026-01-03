@@ -25,14 +25,16 @@
 
 ```yml
 plugins:
-  - name: hello-world
-    id: hello-world
+  - name: daemon-task-matcher
+    id: daemon-task-matcher
     uses:
       - plugin: http://localhost:4000
         with:
-          # Define configurable items here and the kernel will pass these to the plugin.
-          configurableResponse: "Hello, is it me you are looking for?"
-          customStringsUrl: "https://raw.githubusercontent.com/ubiquibot/plugin-template/development/strings.json"
+          confidenceThreshold: 0.5
+          maxSuggestions: 5
+          requirePriceLabel: true
+          priceLabelRegex: "^Price:\\s*\\d+(?:\\.\\d+)?\\s*[A-Za-z]{2,10}$"
+          maxIssuesPerLlmCall: 40
 ```
 
 ###### At this stage, your plugin will fire on your defined events with the required settings passed in from the kernel. You can now start writing your plugin's logic.

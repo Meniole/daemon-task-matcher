@@ -1,23 +1,20 @@
 {
-  "name": "ts-template",
-  "description": "ts-template for UbiquityOS plugins.",
-  "commands": {
-    "hello": {
-      "ubiquity:example": "/hello argument",
-      "description": "Hello command with an argument."
-    }
-  },
+  "name": "daemon-task-matcher",
+  "description": "Suggests priced issues that likely match a newly opened PR.",
+  "short_name": "daemon-task-matcher",
+  "ubiquity:listeners": ["pull_request.opened", "pull_request.reopened", "issue_comment.edited"],
   "configuration": {
     "default": {},
     "type": "object",
     "properties": {
-      "configurableResponse": {
-        "default": "Hello, world!",
+      "confidenceThreshold": { "default": 0.5, "type": "number" },
+      "maxSuggestions": { "default": 5, "type": "integer" },
+      "requirePriceLabel": { "default": true, "type": "boolean" },
+      "priceLabelRegex": {
+        "default": "^Price:\\s*\\d+(?:\\.\\d+)?\\s*[A-Za-z]{2,10}$",
         "type": "string"
       },
-      "customStringsUrl": {
-        "type": "string"
-      }
+      "maxIssuesPerLlmCall": { "default": 40, "type": "integer" }
     }
   }
 }

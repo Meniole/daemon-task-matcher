@@ -9,8 +9,11 @@ import { StaticDecode, Type as T } from "@sinclair/typebox";
  */
 export const pluginSettingsSchema = T.Object(
   {
-    configurableResponse: T.String({ default: "Hello, world!" }),
-    customStringsUrl: T.Optional(T.String()),
+    confidenceThreshold: T.Number({ default: 0.5, minimum: 0, maximum: 1 }),
+    maxSuggestions: T.Integer({ default: 5, minimum: 1, maximum: 20 }),
+    requirePriceLabel: T.Boolean({ default: true }),
+    priceLabelRegex: T.String({ default: "^Price:\\s*\\d+(?:\\.\\d+)?\\s*[A-Za-z]{2,10}$" }),
+    maxIssuesPerLlmCall: T.Integer({ default: 40, minimum: 5, maximum: 200 }),
   },
   { default: {} }
 );
