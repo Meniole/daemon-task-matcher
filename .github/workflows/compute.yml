@@ -20,6 +20,9 @@ on:
       command:
         description: "Command from the Kernel"
         required: false
+      ubiquityKernelToken:
+        description: "Ubiquity Kernel Token"
+        required: false
 
 jobs:
   compute:
