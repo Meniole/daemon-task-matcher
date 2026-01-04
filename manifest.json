@@ -23,10 +23,6 @@
         "default": true,
         "type": "boolean"
       },
-      "priceLabelRegex": {
-        "default": "^Price:\\s*\\d+(?:\\.\\d+)?\\s*[A-Za-z]{2,10}$",
-        "type": "string"
-      },
       "maxIssuesPerLlmCall": {
         "default": 40,
         "minimum": 5,

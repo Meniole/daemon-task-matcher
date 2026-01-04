@@ -25,16 +25,12 @@
 
 ```yml
 plugins:
-  - name: daemon-task-matcher
-    id: daemon-task-matcher
-    uses:
-      - plugin: http://localhost:4000
-        with:
-          confidenceThreshold: 0.5
-          maxSuggestions: 5
-          requirePriceLabel: true
-          priceLabelRegex: "^Price:\\s*\\d+(?:\\.\\d+)?\\s*[A-Za-z]{2,10}$"
-          maxIssuesPerLlmCall: 40
+  http://localhost:4000:
+    with:
+      confidenceThreshold: 0.5
+      maxSuggestions: 5
+      requirePriceLabel: true
+      maxIssuesPerLlmCall: 40
 ```
 
 ###### At this stage, your plugin will fire on your defined events with the required settings passed in from the kernel. You can now start writing your plugin's logic.

@@ -42,7 +42,6 @@ export class PullRequestTaskMatcher {
 
     const issueFinder = new UnassignedPricedIssueFinder(this._context, {
       requirePriceLabel: config.requirePriceLabel,
-      priceLabelRegex: config.priceLabelRegex,
     });
     const issues = await issueFinder.listOpenUnassignedIssues(repos);
 

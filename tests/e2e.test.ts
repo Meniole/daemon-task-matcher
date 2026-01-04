@@ -133,7 +133,6 @@ function createPullRequestContext(): Context {
       confidenceThreshold: 0.5,
       maxSuggestions: 5,
       requirePriceLabel: true,
-      priceLabelRegex: "^Price:\\s*\\d+(?:\\.\\d+)?\\s*[A-Za-z]{2,10}$",
       maxIssuesPerLlmCall: 40,
     },
     octokit: new customOctokit(),

@@ -3,8 +3,9 @@ import { IssueSummary, RepoRef } from "./types";
 
 export type IssueFinderConfig = {
   requirePriceLabel: boolean;
-  priceLabelRegex: string;
 };
+
+const PRICE_LABEL_REGEX = /^Price:\s*\d+(?:\.\d+)?\s*[A-Za-z]{2,10}$/;
 
 export class UnassignedPricedIssueFinder {
   constructor(
@@ -49,8 +50,7 @@ export class UnassignedPricedIssueFinder {
     const labels = (i.labels ?? []).map((l) => (typeof l === "string" ? l : (l?.name ?? ""))).filter((v) => v.length > 0);
 
     if (this._config.requirePriceLabel) {
-      const rx = new RegExp(this._config.priceLabelRegex);
-      if (!labels.some((l) => rx.test(l))) return null;
+      if (!labels.some((l) => PRICE_LABEL_REGEX.test(l))) return null;
     }
 
     const assignees = i.assignees ?? [];

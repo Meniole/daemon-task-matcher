@@ -12,7 +12,6 @@ export const pluginSettingsSchema = T.Object(
     confidenceThreshold: T.Number({ default: 0.5, minimum: 0, maximum: 1 }),
     maxSuggestions: T.Integer({ default: 5, minimum: 1, maximum: 20 }),
     requirePriceLabel: T.Boolean({ default: true }),
-    priceLabelRegex: T.String({ default: "^Price:\\s*\\d+(?:\\.\\d+)?\\s*[A-Za-z]{2,10}$" }),
     maxIssuesPerLlmCall: T.Integer({ default: 40, minimum: 5, maximum: 200 }),
   },
   { default: {} }
