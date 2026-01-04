@@ -1,6 +1,6 @@
 import { CheckboxSelectionHandler } from "./pull-request-task-matcher/checkbox-selection-handler";
 import { PullRequestTaskMatcher } from "./pull-request-task-matcher/pull-request-task-matcher";
-import { Context } from "./types";
+import { Context } from "./types/index";
 import { isIssueCommentEditedEvent, isPullRequestEvent } from "./types/typeguards";
 
 /**

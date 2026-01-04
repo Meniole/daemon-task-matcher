@@ -5,7 +5,7 @@ import { Logs } from "@ubiquity-os/ubiquity-os-logger";
 import { http, HttpResponse } from "msw";
 import manifest from "../manifest.json";
 import { runPlugin } from "../src";
-import type { Context } from "../src/types";
+import type { Context } from "../src/types/index";
 import { db } from "./__mocks__/db";
 import { setupTests } from "./__mocks__/helpers";
 import { server } from "./__mocks__/node";

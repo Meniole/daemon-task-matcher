@@ -1,4 +1,4 @@
-import { Context } from "../types";
+import { Context } from "../types/index";
 
 const LINKS_MARKER_START = "<!-- daemon-task-matcher:linked-issues:start -->";
 const LINKS_MARKER_END = "<!-- daemon-task-matcher:linked-issues:end -->";

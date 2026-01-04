@@ -1,4 +1,4 @@
-import { Context } from "../types";
+import { Context } from "../types/index";
 import { RepoRef } from "./types";
 
 export class InstallationRepoLister {

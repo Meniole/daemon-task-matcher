@@ -1,4 +1,4 @@
-import { Context } from "../types";
+import { Context } from "../types/index";
 import { MatcherCommentParser } from "./matcher-comment-parser";
 import { PullRequestBodyLinker } from "./pull-request-body-linker";
 

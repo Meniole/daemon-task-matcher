@@ -1,4 +1,4 @@
-import { Context } from "../types";
+import { Context } from "../types/index";
 import { MatchSuggestion, PullRequestSummary } from "./types";
 
 const MARKER = "<!-- daemon-task-matcher:suggestions -->";

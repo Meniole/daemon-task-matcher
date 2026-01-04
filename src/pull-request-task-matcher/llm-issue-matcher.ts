@@ -1,5 +1,5 @@
 import { callLlm, sanitizeLlmResponse } from "@ubiquity-os/plugin-sdk";
-import { Context } from "../types";
+import { Context } from "../types/index";
 import { IssueSummary, MatchSuggestion, PullRequestDiff, PullRequestSummary } from "./types";
 
 export type IssueMatcherConfig = {

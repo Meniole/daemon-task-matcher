@@ -1,4 +1,4 @@
-import { Context } from "../types";
+import { Context } from "../types/index";
 import { InstallationRepoLister } from "./installation-repo-lister";
 import { LlmIssueMatcher } from "./llm-issue-matcher";
 import { PullRequestCommenter } from "./pull-request-commenter";
