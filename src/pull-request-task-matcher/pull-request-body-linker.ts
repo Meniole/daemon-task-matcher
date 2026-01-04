@@ -63,7 +63,7 @@ export class PullRequestBodyLinker {
   }
 
   private _upsertBlock(existingBody: string, targets: LinkTarget[]): string {
-    const blockLines = [LINKS_MARKER_START, ...targets.map((t) => `Closes ${t.owner}/${t.repo}#${t.number}`), LINKS_MARKER_END];
+    const blockLines = [LINKS_MARKER_START, ...targets.map((t) => `Resolves ${t.owner}/${t.repo}#${t.number}`), LINKS_MARKER_END];
 
     const newBlock = blockLines.join("\n");
 

@@ -67,7 +67,7 @@ export class PullRequestTaskMatcher {
     }
 
     const commenter = new PullRequestCommenter(this._context);
-    await commenter.upsertSuggestions(pr, top, config.confidenceThreshold);
+    await commenter.upsertSuggestions(pr, top);
   }
 
   private async _hasClosingIssuesReference(owner: string, repo: string, number: number): Promise<boolean> {

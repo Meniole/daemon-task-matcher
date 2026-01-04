@@ -107,7 +107,7 @@ describe("e2e", () => {
     const comments = db.issueComments.getAll();
     const suggestion = comments.find((c) => c.body.includes("<!-- daemon-task-matcher:suggestions -->"));
     expect(suggestion).toBeTruthy();
-    expect(suggestion?.body).toContain("Task matcher suggestions");
+    expect(suggestion?.body).toContain("Related issues suggestions");
     expect(suggestion?.body).toContain(`${STRINGS.USER_1}/${STRINGS.TEST_REPO}#1`);
   });
 });
