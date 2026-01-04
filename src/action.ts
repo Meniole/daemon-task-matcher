@@ -1,3 +1,4 @@
+// Hello world
 import { createActionsPlugin, Options } from "@ubiquity-os/plugin-sdk";
 import { LOG_LEVEL, LogLevel } from "@ubiquity-os/ubiquity-os-logger";
 import { runPlugin } from "./index";
