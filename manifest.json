@@ -32,9 +32,16 @@
       "openRouter": {
         "type": "object",
         "properties": {
-          "endpoint": { "type": "string" },
-          "model": { "type": "string" }
-        }
+          "endpoint": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "model": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": ["endpoint", "model"]
       }
     }
   }
