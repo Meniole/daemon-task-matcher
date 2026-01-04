@@ -63,7 +63,7 @@ export class LlmIssueMatcher {
       })),
     };
 
-    const system = "You match GitHub pull requests to the most likely existing open issues. " + "Return only valid JSON. Confidence must be between 0 and 1.";
+    const system = "You match GitHub pull requests to the most likely existing open issues. Return only valid JSON. Confidence must be between 0 and 1.";
 
     const user =
       "Given the pull request and its diff plus candidate issues, return the best matching issues. " +
