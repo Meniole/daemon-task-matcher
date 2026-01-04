@@ -39,11 +39,12 @@ export class PullRequestTaskMatcher {
 
     const repoLister = new InstallationRepoLister(this._context);
     const repos = await repoLister.listRepos();
+    const reposToScan = repos.length > 0 ? repos : [{ owner: pr.owner, repo: pr.repo }];
 
     const issueFinder = new UnassignedPricedIssueFinder(this._context, {
       requirePriceLabel: config.requirePriceLabel,
     });
-    const issues = await issueFinder.listOpenUnassignedIssues(repos);
+    const issues = await issueFinder.listOpenUnassignedIssues(reposToScan);
 
     if (issues.length === 0) {
       logger.info("No candidate issues found.");
