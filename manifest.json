@@ -7,14 +7,27 @@
     "default": {},
     "type": "object",
     "properties": {
-      "confidenceThreshold": { "default": 0.5, "type": "number" },
-      "maxSuggestions": { "default": 5, "type": "integer" },
-      "requirePriceLabel": { "default": true, "type": "boolean" },
+      "confidenceThreshold": {
+        "default": 0.5,
+        "type": "number"
+      },
+      "maxSuggestions": {
+        "default": 5,
+        "type": "integer"
+      },
+      "requirePriceLabel": {
+        "default": true,
+        "type": "boolean"
+      },
       "priceLabelRegex": {
         "default": "^Price:\\s*\\d+(?:\\.\\d+)?\\s*[A-Za-z]{2,10}$",
         "type": "string"
       },
-      "maxIssuesPerLlmCall": { "default": 40, "type": "integer" }
+      "maxIssuesPerLlmCall": {
+        "default": 40,
+        "type": "integer"
+      }
     }
-  }
+  },
+  "homepage_url": "https://daemon-task-matcher-develo.deno.dev"
 }
