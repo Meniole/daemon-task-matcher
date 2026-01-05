@@ -1,7 +1,7 @@
 {
   "name": "daemon-task-matcher",
   "description": "Suggests priced issues that likely match a newly opened PR.",
-  "short_name": "Meniole/daemon-task-matcher@development",
+  "short_name": "Meniole/daemon-task-matcher@meniole-development",
   "ubiquity:listeners": ["pull_request.opened", "pull_request.reopened", "issue_comment.edited"],
   "configuration": {
     "default": {},
