@@ -1,8 +1,9 @@
 {
-  "name": "daemon-task-matcher",
-  "description": "Suggests priced issues that likely match a newly opened PR.",
-  "short_name": "Meniole/daemon-task-matcher@development",
+  "name": "plugin-template",
+  "short_name": "Meniole/daemon-task-matcher@main",
+  "description": "Ubiquibot plugin template repository with TypeScript support.",
   "ubiquity:listeners": ["pull_request.opened", "pull_request.reopened", "issue_comment.edited"],
+  "skipBotEvents": true,
   "configuration": {
     "default": {},
     "type": "object",
